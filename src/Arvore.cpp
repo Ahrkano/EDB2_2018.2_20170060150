@@ -32,6 +32,7 @@ void Arvore::adicionar(No* novo, char _val){
 	if(elementos.size() == 0)
 	{
 		elementos.push_back(novo);
+		setAltura(getAltura()+1);
 	}
 	else
 	{
@@ -54,6 +55,7 @@ void Arvore::adicionar(No* novo, char _val){
 			}
 
 			elementos.push_back(novo);
+			setAltura(getAltura()+1);
 		}
 		else
 			std::cout<<"Erro: no pai inexistente"<<std::endl;
@@ -61,6 +63,8 @@ void Arvore::adicionar(No* novo, char _val){
 	return;
 }
 
+//atualmente funcao que apaga todos os nos da arvore
+//TODO
 void Arvore::remover(){
 
 	for (std::vector<No* >::iterator it = elementos.begin() ; it != elementos.end(); ++it)
